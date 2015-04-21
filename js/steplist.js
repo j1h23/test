@@ -39,7 +39,7 @@ function InitializeTreeViewAll() {
 function onSelect(e) {
     var stepIndex = $("#treeView").data('kendoTreeView').dataItem(e.node).id;
     if (stepIndex !== "Title") {
-        parent.window.CloseStepListAndNavigate(stepIndex); 
+        parent.window.CloseStepListAndNavigate(stepIndex);
     }
 }
 function PreSelect() {
@@ -50,7 +50,7 @@ function PreSelect() {
         treeView = $("#treeView").data("kendoTreeView");
     if (currentIndex < totalIntroSlideCount) {
         treeView.expandPath(["Title"]);
-        
+
     } else {
         selectTreeNodeDataItem = treeView.dataSource.get(currentIndex);
         selectTreeNode = treeView.findByUid(selectTreeNodeDataItem.uid);
@@ -80,7 +80,7 @@ function InitializeTreeViewCheckMark() {
 function FlattenData(rawDataList) {
     var i,
         currentRawData,
-        outputData=[];
+        outputData = [];
     for (i = 0; i < rawDataList.length; i++) {
         currentRawData = rawDataList[i];
         outputData.push(
