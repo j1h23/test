@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="styles/bootstrap.min.css" rel="stylesheet" />
+    <title></title>
+</head>
+<body>
+    <div id="notesModal" class="container">
+        <div class="row">
+            <div class="container">
+                <ul id="NoteContent" class="media-list">
+                    <li class="media">
+                        <div class="media-body">
+                            <small class="text-muted">No notes yet...</small>
+                        </div>
+                    </li>
+                </ul>
+                <div class="panel">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="note" placeholder="Enter Note..." />
+                        <span id="btnSubmit" class="btn input-group-addon" onclick="SaveNote()">SUBMIT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var StepId;
+        $(document).ready(function () {
+            StepId = GetStepId();
+            LoadNotes();
+            window.scrollTo(0, document.body.scrollHeight);
+        });
+        function LoadNotes() {
+            var i,
+                $noteContent = $("#NoteContent"),
+                noteJsonStr = window.external.GetNotes(StepId);
+            if (noteJsonStr) {
+                var noteJson = JSON.parse(noteJsonStr);
+                if (noteJson.length > 0) {
+                    $noteContent.empty();
+                }
+                for (i = 0; i < noteJson.length; i++) {
+                    $noteContent.append(
+                        $("<li></li>", {
+                            "class": "media"
+                        })
+                        .append(
+                            $("<div></div>", {
+                                "class": "media-body",
+                                text: noteJson[i].Note
+                            }))
+                        .append("<br />")
+                        .append(
+                            $("<small></small>", {
+                                "class": "text-muted",
+                                text: noteJson[i].UpdateByName + " | " + new Date(parseInt(noteJson[i].UpdateTime.substr(6)))
+                            })
+                        )
+                        .append("<hr />")
+                    );
+                }
+            }
+        }
+        function SaveNote() {
+            try {
+                var note = $("#note").val();
+                window.external.SaveNote(note, StepId);
+            } catch (e) {
+                alert(e);
+            }
+            $("#note").val("");
+            LoadNotes();
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+        function GetStepId() {
+            var stepInfo,
+                introSlidesCount = parent.IntroSlidesCount,
+                currentIndex = parent.CurrentStepIndex;
+            if (introSlidesCount !== null && currentIndex !== null && currentIndex >= introSlidesCount) {
+                stepInfo = parent.window["step" + currentIndex];
+                if (stepInfo) {
+                    return stepInfo.StepID;
+                }
+            }
+            throw "An error occurred getting the current Step Id";
+        }
+    </script>
+</body>
+</html>

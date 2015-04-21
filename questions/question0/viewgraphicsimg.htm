@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
+<meta name=ProgId content=VisualStudio.HTML>
+<meta name=Originator content="Microsoft Visual Studio .NET 7.1">
+<TITLE>Graphics Viewer</TITLE>
+<style type="text/css">
+.seleButton { FONT-WEIGHT: bold; WIDTH: 110px; BORDER-TOP-STYLE: inset; BORDER-RIGHT-STYLE: inset; BORDER-LEFT-STYLE: inset; HEIGHT: 55px; BORDER-BOTTOM-STYLE: inset }
+.unSeleButton { WIDTH: 110px; BORDER-TOP-STYLE: outset; BORDER-RIGHT-STYLE: outset; BORDER-LEFT-STYLE: outset; HEIGHT: 55px; BORDER-BOTTOM-STYLE: outset }
+</style>
+<script ID=clientEventHandlersJS LANGUAGE=javascript>
+<!--
+
+var strImgURL="";
+
+function calcNewDimOfGr(perChg, curDim)
+{
+	return(curDim * (1+(perChg/100)));
+}
+
+function magnifyImg(perChg, objName) {
+    document.getElementById(objName).className = "seleButton";
+    var imgObj = document.getElementById("imgGr");
+    var iw = calcNewDimOfGr(perChg, imgObj.width);
+   // var ih = calcNewDimOfGr(perChg, imgObj.height);
+	if (iw > 19) {
+	        imgObj.width = iw;
+	      //imgObj.height = ih;
+}
+	//tdLog.innerHTML += iw + ",";
+}
+
+function  restoreClassName(objName)
+{
+    document.getElementById(objName).className = "unSeleButton";
+}
+
+function restoreOriSize(objName)
+{
+	var newImgObj = new Image();
+	
+	document.getElementById(objName).className = "seleButton";
+	newImgObj.src = strImgURL;
+	document.getElementById("imgGr").width = newImgObj.width;
+	document.getElementById("imgGr").height = newImgObj.height;
+}
+function window_onload() 
+{
+    var imgObj = document.getElementById("imgGr");
+	var dialgObj = window.dialogArguments;
+	strImgURL = dialgObj.ImgURL;
+        imgObj.src = strImgURL;
+        if (document.attachEvent) {
+            document.attachEvent("onmousewheel", magnifyTheImage);
+}
+}
+
+function magnifyTheImage(e) {
+    var evt = (window.event || e);  //equalize event object
+    var wValue = (evt.wheelDelta / 120) * 5; //5% change per wheel click..
+    if (wValue > 0)
+        magnifyImg(wValue, 'btnPlus'); else
+        magnifyImg(wValue, 'btnMinus');
+}
+
+-->
+</script>
+</head>
+<body LANGUAGE=javascript onload="return window_onload()">
+    <table border="0" height="100%">
+        <tr height="1"><td><table width="100%"><tr>
+		    <td width="1" id="btnPlus" class="unSeleButton" onclick="magnifyImg(5,'btnPlus')" OnMouseOut="restoreClassName('btnPlus')" align="center" style="height:2px" 
+			    valign="middle"><img src="images/plus.jpg" border=0 alt="Zoom in"></td>
+		    <td width="1" id="btnMinus" class="unSeleButton" onclick="magnifyImg(-5,'btnMinus')" OnMouseOut="restoreClassName('btnMinus')" align="center" style="height:2px" 
+			    valign="middle"><img src="images/minus.jpg" border=0 alt="Zoom out"></td>
+		    <td width="1" id="btnRestore" class="unSeleButton" OnClick="restoreOriSize('btnRestore')" OnMouseOut="restoreClassName('btnRestore')" align="center" style="height:2px"  
+			    valign="middle"><img src="images/orisize.jpg" border=0 alt="Restore to the original size"></td>
+			<td width="100%" id="tdLog">&nbsp;</td>
+	        </tr>
+           </table>
+          </td>
+        </tr>
+        <tr height="100%"><td align="center" valign="middle"><img id="imgGr" src="" border="0"/></td>
+        </tr>
+    </table>    
+</body>
+</html>

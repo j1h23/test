@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery.min.js"></script>
+    <script src="kendo.web.min.js"></script>
+    <link href="kendo.common.min.css" rel="stylesheet" />
+    <link href="kendo.blueopal.min.css" rel="stylesheet" />
+    <script>
+      function getProcessData() {
+        return parent.window.GetProcessNames();
+        /*var data = [];
+
+        var ProcessNames = ["Go UP", "GowDown"];
+        var Images = ["images/arrowdnu.gif", "images/arrowdown-small.gif"];
+        for (var i = 0; i < ProcessNames.length; i++) {
+          var ProcessName = ProcessNames[i];
+          var ProcessImage = Images[i];
+          data.push({
+            Id: i + 1,
+            ProcessName: ProcessName,
+            ProcessImage: ProcessImage
+          });
+        }
+        return data;*/
+      }
+    </script>
+</head>
+<body>
+
+        <div id="example" class="k-content">
+            <div id="grid"></div>
+
+            <script>
+              $(document).ready(function () {
+                $("#grid").kendoGrid({
+                  dataSource: {
+                    data: getProcessData(),
+                    schema: {
+                      model: {
+                        fields: {
+                          ProcessName: { type: "string" },
+                          ProcessImage: { type: "string" }
+                        }
+                      }
+                    }
+                  },
+                  
+                  scrollable: false,
+                  sortable: false,
+                  filterable: false,
+                  pageable: false,
+                  columns: [
+                            {
+                              field: "ProcessName",
+                              title: "Process",
+                              width: 400
+                            },
+                            {
+                              field: "ProcessImage",
+                              template: '<img  src ="#=ProcessImage #"/>',
+                              title: "Change",
+                              width: 80
+                            }
+                        ]
+                });
+              });
+            </script>
+        </div>
+
+
+</body>
+</html>

@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+		<title>Graphical Interaction</title>
+    
+		<SCRIPT>      function btnOkmOverBtn(divBtn) {
+				if (btnOkisBtnEnabled()) {
+					document.all('btnOktdLeftCap').background = 'images/button-left.gif';
+					try { document.all('btnOktdRightCap').background = 'images/button-right.gif'; } catch (Exception) { }
+					try { document.all('btnOktdButtonImage').background = 'images/button-middle.gif'; } catch (Exception) { }
+					try { document.all('btnOktdContent').background = 'images/button-middle.gif'; } catch (Exception) { }
+				}
+			}
+			function btnOkmDownBtn(divBtn) {
+				if (btnOkisBtnEnabled()) {
+					document.all('btnOktdLeftCap').background = 'images/LeftCapImageMouseDown.gif';
+					try { document.all('btnOktdRightCap').background = 'images/RightCapImageMouseDown.gif'; } catch (Exception) { }
+					try { document.all('btnOktdButtonImage').background = 'images/MiddleCapImageMouseDown.gif'; } catch (Exception) { }
+					try { document.all('btnOktdContent').background = 'images/MiddleCapImageMouseDown.gif'; } catch (Exception) { }
+				}
+			}
+			function btnOkisBtnEnabled() {
+				var enabled = true;
+				try {
+					enabled = document.all('btnOk').enabled;
+					if (enabled == 'false') {
+						enabled = false;
+					}
+					if (enabled == 'true') {
+						enabled = true;
+					}
+					if (enabled == null) {
+						enabled = true;
+					}
+				}
+				catch (Exception) { }
+				return enabled;
+			}
+			function btnOkbtnClick() {
+				if (btnOkisBtnEnabled()) {
+					windup();
+					//document.all("btnOk").click();
+				}
+			}
+			function btnOkmOutBtn(divBtn) {
+				if (btnOkisBtnEnabled()) {
+					document.all('btnOktdLeftCap').background = 'images/button-left-50.gif';
+					try { document.all('btnOktdRightCap').background = 'images/button-right-50.gif'; } catch (Exception) { }
+					try { document.all('btnOktdButtonImage').background = 'images/button-middle-50.gif'; } catch (Exception) { }
+					try { document.all('btnOktdContent').background = 'images/button-middle-50.gif'; } catch (Exception) { }
+				}
+			}
+			function btnOkBtnPropertyChange() {
+				if (event.srcElement.id == 'btnOk') {
+					if (event.propertyName == 'value') {
+						document.all('btnOktxt').innerText = document.all('btnOk').value;
+					}
+					if (event.propertyName == 'imageUrl') {
+						document.all('btnOkimgLeft').src = document.all('btnOk').imageUrl;
+					}
+					if (event.propertyName == 'rightImageURL') {
+						document.all('btnOkimgRight').src = document.all('btnOk').rightImageURL;
+					}
+					if (event.propertyName == 'backGroundImageUrl') {
+						document.all('btnOktdContent').background = document.all('btnOk').backGroundImageUrl;
+					}
+					if (event.propertyName == 'disabledImageUrl') {
+					}
+					if (event.propertyName == 'enabled') {
+						if (btnOkisBtnEnabled()) {
+							document.all('btnOktxt').className = 'buttonClass';
+						} else {
+							document.all('btnOktxt').className = 'buttonDisabledClass';
+						}
+					}
+				}
+			}
+			function btnOkEnterPress() {
+				if (event.keyCode == 13) {
+					if (btnOkisBtnEnabled()) { } btnOkbtnClick();
+				}
+			}
+		</SCRIPT>
+		<SCRIPT>  function btnCancelmOverBtn(divBtn) {
+		if (btnCancelisBtnEnabled()) {
+			document.all('btnCanceltdLeftCap').background = 'images/button-left.gif';
+			try { document.all('btnCanceltdRightCap').background = 'images/button-right.gif'; } catch (Exception) { }
+			try { document.all('btnCanceltdButtonImage').background = 'images/button-middle.gif'; } catch (Exception) { }
+			try { document.all('btnCanceltdContent').background = 'images/button-middle.gif'; } catch (Exception) { }
+		}
+	}
+	function btnCancelmDownBtn(divBtn) {
+		if (btnCancelisBtnEnabled()) {
+			document.all('btnCanceltdLeftCap').background = 'images/LeftCapImageMouseDown.gif';
+			try { document.all('btnCanceltdRightCap').background = 'images/RightCapImageMouseDown.gif'; } catch (Exception) { }
+			try { document.all('btnCanceltdButtonImage').background = 'images/MiddleCapImageMouseDown.gif'; } catch (Exception) { }
+			try { document.all('btnCanceltdContent').background = 'images/MiddleCapImageMouseDown.gif'; } catch (Exception) { }
+		}
+	}
+	function btnCancelisBtnEnabled() {
+		var enabled = true;
+		try {
+			enabled = document.all('btnCancel').enabled;
+			if (enabled == 'false') {
+				enabled = false;
+			}
+			if (enabled == 'true') {
+				enabled = true;
+			}
+			if (enabled == null) {
+				enabled = true;
+			}
+		}
+		catch (Exception) { }
+		return enabled;
+	}
+	function btnCancelbtnClick() {
+		if (btnCancelisBtnEnabled()) {
+			cancelClick();
+			//document.all("btnCancel").click();
+		}
+	}
+	function btnCancelmOutBtn(divBtn) {
+		if (btnCancelisBtnEnabled()) {
+			document.all('btnCanceltdLeftCap').background = 'images/button-left-50.gif';
+			try { document.all('btnCanceltdRightCap').background = 'images/button-right-50.gif'; } catch (Exception) { }
+			try { document.all('btnCanceltdButtonImage').background = 'images/button-middle-50.gif'; } catch (Exception) { }
+			try { document.all('btnCanceltdContent').background = 'images/button-middle-50.gif'; } catch (Exception) { }
+		}
+	}
+	function btnCancelBtnPropertyChange() {
+		if (event.srcElement.id == 'btnCancel') {
+			if (event.propertyName == 'value') {
+				document.all('btnCanceltxt').innerText = document.all('btnCancel').value;
+			}
+			if (event.propertyName == 'imageUrl') {
+				document.all('btnCancelimgLeft').src = document.all('btnCancel').imageUrl;
+			}
+			if (event.propertyName == 'rightImageURL') {
+				document.all('btnCancelimgRight').src = document.all('btnCancel').rightImageURL;
+			}
+			if (event.propertyName == 'backGroundImageUrl') {
+				document.all('btnCanceltdContent').background = document.all('btnCancel').backGroundImageUrl;
+			}
+			if (event.propertyName == 'disabledImageUrl') {
+			}
+			if (event.propertyName == 'enabled') {
+				if (btnCancelisBtnEnabled()) {
+					document.all('btnCanceltxt').className = 'buttonClass';
+				} else {
+					document.all('btnCanceltxt').className = 'buttonDisabledClass';
+				}
+			}
+		}
+	}
+	function btnCancelEnterPress() {
+		if (event.keyCode == 13) {
+			if (btnCancelisBtnEnabled()) { } btnCancelbtnClick();
+		}
+	}
+		</SCRIPT>
+    <script>
+      var x;
+      var y;
+      var pictop1 = new Array();
+      var picleft1 = new Array();
+      var pictop2 = new Array();
+      var picleft2 = new Array();
+      var lineH1 = new Array();
+      var lineH2 = new Array();
+      var lineV1 = new Array();
+      var lineV2 = new Array();
+      var Xval = new Array();
+      var Yval = new Array();
+      var Xextentval = new Array();
+      var Yextentval = new Array();
+      var Corr_InCorr_Resp = new Array();
+      var oMyObject = window.dialogArguments;
+      x = parseFloat(oMyObject.x);
+      y = parseFloat(oMyObject.y);
+      Xval = oMyObject.Xval;
+      Yval = oMyObject.Yval;
+      Xextentval = oMyObject.Xextentval;
+      Yextentval = oMyObject.Yextentval;
+      Corr_InCorr_Resp = oMyObject.Corr_InCorr_Resp;
+      showanswer = oMyObject.showanswer;
+      answered = oMyObject.answered;
+            var imgHeight = parseInt(oMyObject.ActualHeight);
+      var imgWidth = parseInt(oMyObject.ActualWidth);
+      if (isNaN(x)) {
+        x = -100;
+        y = -100;
+      } else {
+        x = x * imgWidth;
+        y = y * imgHeight;
+      }
+
+      var centerPoint = imgWidth / 2;
+      function clicked(e) {
+        if (oMyObject.answered) {
+          return;
+        }
+        x = window.event.clientX;
+        y = window.event.clientY;
+        //  alert(x);
+        yp = (parseInt(y) - 3) + "px";
+        xp = (parseInt(x) - 10) + "px";
+        ev = "document.all('cross').style.top='" + yp + "'";
+        eval(ev);
+        ev = "document.all('cross').style.left='" + xp + "'";
+        eval(ev);
+      }
+      function cancelClick() {
+        window.close();
+      }
+      function windup() {
+        oMyObject.x = (parseFloat(x) / imgWidth);
+        oMyObject.y = (parseFloat(y) / imgHeight);
+        window.close();
+      }
+
+      
+	</script>
+</head>
+<body>
+<script>
+  var LDIV = "";
+
+if (oMyObject.answered) 
+{
+  for (var i = 0; i < Xval.length; i++) {
+    var picleft1 = parseFloat(Xval[i]) *  oMyObject.ActualWidth;
+    var picleft2 = parseFloat(Xextentval[i]) * oMyObject.ActualWidth;
+    var pictop1 = parseFloat(Yval[i]) * oMyObject.ActualHeight;
+    var pictop2 = parseFloat(Yextentval[i]) * oMyObject.ActualHeight;
+    var lnColor = "";
+    if (Corr_InCorr_Resp[i] == "Y") {
+      lnColor = "green";
+    }
+    else {
+      lnColor = "red";
+    }
+    LDIV += "<DIV style=\"Z-INDEX:1000;BORDER-RIGHT: " + lnColor + " thin solid; BORDER-TOP: " + lnColor + " thin solid; LEFT: " + picleft1 + "px; BORDER-LEFT: " + lnColor + " thin solid; WIDTH: " + (picleft2 - picleft1) + "px; BORDER-BOTTOM: " + lnColor + " thin solid; POSITION: absolute; TOP: " + pictop1 + "px; HEIGHT: " + (pictop2 - pictop1) + "px\"></DIV>";
+  }
+}
+var DocumentString = '<img width="' + imgWidth + '" height="' + imgHeight + '" id="pic" language="javascript" style="left: 0px; top: 0px; position: absolute; cursor: hand;" onclick="return clicked(event)" alt="Picture" src="' + oMyObject.GraphicSrc + '" border="2"/>';
+DocumentString += '<img id="cross" style="left: ' + x + 'px; top: ' + y + 'px; position: absolute; z-index: 5;" src="images/hand_cursor.png"/>';
+var divOk='';
+var btnTop = imgHeight + 5;
+var btnOkLeft = centerPoint - 50;
+var btnCancelLeft = centerPoint + 10;
+divOk= '<div tabIndex="0" id="divOk" style="top: '+btnTop+'px;left:'+btnOkLeft +'px; width: 40px; vertical-align: middle; display: inline; position: absolute; z-index: 7;" onkeypress="btnOkEnterPress()">';
+divOk += '<DIV style="DISPLAY: inline; VERTICAL-ALIGN: middle"><SPAN id=btnOkspanMain onmouseup=btnOkmOverBtn(this) onmouseover=btnOkmOverBtn(this) title=Ok onmouseout=btnOkmOutBtn(this) onmousedown=btnOkmDownBtn(this) onclick=btnOkbtnClick();><TABLE style="WIDTH: 40px; DISPLAY: inline; HEIGHT: 40px; CURSOR: default" id=tblbtnOk border=0 cellSpacing=0 cellPadding=0><TBODY><TR height=40><TD style="PADDING-LEFT: 3px" id=btnOktdLeftCap background=images/button-left-50.gif></TD><TD style="PADDING-LEFT: 0px; PADDING-RIGHT: 2px" id=btnOktdContent background=images/button-middle-50.gif width="100%" align=center><NOBR><SPAN style="WIDTH: 40px" id=btnOktxt onselectstart=event.returnValue=false; class=buttonClass>&nbsp;&nbsp;Ok&nbsp;&nbsp;</SPAN></NOBR> </TD><TD style="PADDING-LEFT: 3px" id=btnOktdRightCap background="images/button-right-&#13;&#10;&#13;&#10;50.gif"></TD></TR></TBODY></TABLE></SPAN></DIV></div>';
+var divCancel = '';
+ if (oMyObject.answered!="Y")
+      {
+        divCancel = '<DIV style="Z-INDEX: 7; POSITION: absolute; WIDTH: 40px; DISPLAY: inline; VERTICAL-ALIGN: middle; left:' + btnCancelLeft + 'px; TOP:' + btnTop + 'px;" id="divCancel" tabIndex=0 onkeypress=btnCancelEnterPress()>';
+
+divCancel+='<DIV style="DISPLAY: inline; VERTICAL-ALIGN: middle"><SPAN id=btnCancelspanMain onmouseup=btnCancelmOverBtn(this) onmouseover=btnCancelmOverBtn(this) title=Cancel onmouseout=btnCancelmOutBtn(this) onmousedown=btnCancelmDownBtn(this) onclick=btnCancelbtnClick();><TABLE style="WIDTH: 40px; DISPLAY: inline; HEIGHT: 40px; CURSOR: default" id=tblbtnCancel border=0 cellSpacing=0 cellPadding=0><TBODY><TR height=40><TD style="PADDING-LEFT: 3px" id=btnCanceltdLeftCap background=images/button-left-50.gif></TD><TD style="PADDING-LEFT: 0px; PADDING-RIGHT: 2px" id=btnCanceltdContent background=images/button-middle-50.gif width="100%" align=center><NOBR><SPAN style="WIDTH: 40px" id=btnCanceltxt onselectstart=event.returnValue=false; class=buttonClass>Cancel</SPAN></NOBR> </TD><TD style="PADDING-LEFT: 3px" id=btnCanceltdRightCap background="images/button-right-&#13;&#10;&#13;&#10;50.gif"></TD></TR></TBODY></TABLE></SPAN></DIV></DIV>';
+}
+var doctoWrite = DocumentString + divOk + divCancel + LDIV;
+document.write(doctoWrite);
+</script>
+</body>
+</html>

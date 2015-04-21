@@ -1,0 +1,127 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<META HTTP-EQUIV="Expires" CONTENT="Fri, Jun 12 1981 08:20:00 GMT">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+<TITLE>Exit</TITLE>
+<script language="JavaScript1.2"><!--
+
+var oMyObject = window.dialogArguments;
+what = oMyObject.what;
+ieSupport = oMyObject.ieSupport;
+bookMarkAllowed=oMyObject.bookMarkAllowed;
+abandonAllowed=oMyObject.abandonAllowed ;
+//exitAllowed=oMyObject.exitAllowed ;
+
+var imgborder;
+function enlarge(aimage) {
+
+	imgborder=aimage.style.border;
+	aimage.style.border='2px groove red';
+	if(ieSupport){
+ // aimage.filters.item(1).opacity = 100;  
+	}
+}
+
+function revertback(aimage) {
+	 aimage.style.border='2px groove black';
+	if(ieSupport){
+	//aimage.filters.item(1).opacity = 80;
+	}
+}
+//--></script>
+
+<SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+<!--
+
+function ImgScore_onclick() {
+	oMyObject.what="score";
+	window.close();
+}
+
+function ImgAbandon_onclick() {
+	oMyObject.what="abandon";
+	window.close();
+}
+
+function ImgBookMark_onclick() {
+	oMyObject.what="bookmark";
+	window.close();
+}
+
+function ImgReturn_onclick() {
+	oMyObject.what="return";
+	window.close();
+}
+
+//-->
+</SCRIPT>
+<SCRIPT LANGUAGE=javascript FOR=ImgScore EVENT=onclick>
+<!--
+ ImgScore_onclick()
+//-->
+</SCRIPT>
+<SCRIPT LANGUAGE=javascript FOR=ImgAbandon EVENT=onclick>
+<!--
+if(abandonAllowed=="Y"){
+ ImgAbandon_onclick();
+ }
+//-->
+</SCRIPT>
+<SCRIPT LANGUAGE=javascript FOR=ImgBookMark EVENT=onclick>
+<!--
+if(bookMarkAllowed=="Y"){
+ImgBookMark_onclick();
+}
+//-->
+</SCRIPT>
+<SCRIPT LANGUAGE=javascript FOR=ImgReturn EVENT=onclick>
+<!--
+ ImgReturn_onclick()
+//-->
+</SCRIPT>
+</HEAD>
+<BODY>
+
+<P><br>
+<TABLE cellSpacing=1 cellPadding=1 width="90%" border=0 align=center>
+	
+	<TR>
+		<TD align=middle >
+		<IMG id=ImgScore onmouseover=enlarge(this) style="FILTER: progid:DXImageTransform.Microsoft.BasicImage(rotation=0,    mirror=0)  progid:DXImageTransform.Microsoft.Alpha(opacity=80) ; CURSOR: hand;  POSITION: relative" onmouseout=revertback(this) alt="" src="images/scoretest.GIF" border=2 ></TD>
+		<TD>&nbsp;</TD>
+		<TD align=middle >
+		<SCRIPT>
+		//alert(bookMarkAllowed);
+		if(bookMarkAllowed=="Y"){
+		//	document.write('<IMG id=ImgBookMark onmouseover=enlarge(this) style="FILTER: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=0) progid:DXImageTransform.Microsoft.Alpha(opacity=80);    CURSOR:  hand; POSITION: relative" onmouseout  =revertback(this) alt="" src="images/bookmark.GIF" border=2 >')
+		}else{
+		//	document.write('<IMG id=ImgBookMark  style="FILTER: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=0) progid:DXImageTransform.Microsoft.Alpha(opacity=80);    POSITION: relative" alt="" src="images/bookmarkgrey.GIF" border=2 enabled="false">')
+		}
+	</SCRIPT>		
+			</TD>
+	
+		</TR>
+	<TR>
+		<TD  >&nbsp;</TD>
+		<TD>&nbsp;</TD>
+		<TD >&nbsp;</TD></TR>
+		<TR>
+		<TD align=middle >
+				<SCRIPT>
+				//alert(abandonAllowed);
+		if(abandonAllowed=="Y"){
+		//alert(abandonAllowed);
+		//	document.write('<IMG id=ImgAbandon onmouseover=enlarge(this) style="FILTER: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=0)    progid:DXImageTransform.Microsoft.Alpha(opacity=80); CURSOR: hand; POSITION: relative" onmouseout=revertback(this) height=99 alt="" src="images/abandontest.GIF" width=79 border=2 >');
+			}else{
+			//	document.write('<IMG id=ImgAbandon  style="FILTER: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=0)    progid:DXImageTransform.Microsoft.Alpha(opacity=80); POSITION: relative" height=99 alt="" src="images/abandontestgrey.GIF" width=79 border=2 enabled="false">');
+			}
+			</SCRIPT>
+			</TD>
+		<TD>&nbsp;</TD>
+		<TD align=middle ><IMG id=ImgReturn onmouseover=enlarge(this) style="FILTER: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=0)    progid:DXImageTransform.Microsoft.Alpha(opacity=80);  CURSOR: hand; POSITION: relative" onmouseout=revertback(this) alt="" src="images/returntotest.GIF" border=2 ></TD>
+		</TR></TABLE></P>
+
+</BODY>
+</HTML>

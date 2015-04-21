@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><HTML style="height:100%">
+<HEAD id="HtmlPageHeader">
+<title>Quiz</title>
+<link href="Quiz.css" rel="stylesheet" type="text/css" />
+<script src="QuestionProperties.js"></script>
+<script src="Initialize.js"></script>
+<script src="Navigation.js"></script>
+<script src="Scoring.js"></script>
+<script src="ScoreMultiple.js"></script>
+<script src="ScoreAndExit.js"></script>
+<script src="Footer.js"></script>
+<script src="QuestionProperties.js"></script>
+<script src="Quiz.js"></script>
+<script src="kendo.web.min.js"></script><link href="kendo.common.min.css" rel="stylesheet" /><link href="kendo.blueopal.min.css" rel="stylesheet" /></HEAD>
+<BODY style="overflow:hidden" style="height:100%">
+<div id="window" style="display:none"></div><table id="TblQuiz" cellspacing="0" cellpadding="0" width="100%" border="0" height="100%" style="">
+<tr>
+<!--*********************Header Rendering*********************-->
+<td align="center" colspan="2">
+<SPAN id=_quizHeader><TABLE style="BORDER-RIGHT-WIDTH: 0px; WIDTH: 100%; BORDER-COLLAPSE: collapse; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" border=0 cellSpacing=0 cellPadding=0>
+<TBODY>
+<TR>
+<TD>
+<TABLE style="BORDER-RIGHT-WIDTH: 0px; WIDTH: 100%; BORDER-COLLAPSE: collapse; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; HEIGHT: 39%; BORDER-LEFT-WIDTH: 0px" border=0 cellSpacing=0 cellPadding=0>
+<TBODY>
+<TR>
+<TD style="PADDING-LEFT: 5px; HEIGHT: 40px" background="images/footer.gif" noWrap align=left><SPAN id=_quizHeader_lblTestName class="PropLabelBold12">Smart Procedure Test</SPAN></TD>
+<TD style="PADDING-LEFT: 4px; WIDTH: 100%" background="images/footer.gif" noWrap align=left></TD>
+<TD background="images/footer.gif" noWrap align=right><SPAN id="lblStudentName" class="PropLabelBold12">Worley, Deeanna L.</SPAN></TD>
+<TD style="PADDING-LEFT: 10px" background="images/footer.gif" noWrap align=right><SPAN id="_quizHeader_lblCumScoreDesc" class="PropLabel12">Cumulative Score</SPAN></TD>
+<TD style="PADDING-LEFT: 4px; PADDING-RIGHT: 5px" background="images/footer.gif" noWrap align=right><SPAN id="_quizHeader_lblCumScoreValue" class="PropLabel12">0 (0%)</SPAN></TD>
+<TD></TD></TR></TBODY></TABLE></TD></TR>
+<TR style="HEIGHT: 8px">
+<TD style="BORDER-LEFT: #a3a3a3 1px solid; BORDER-RIGHT: #a3a3a3 1px solid" background="images/title-bar-shadow-white.gif">
+<IMG border=0 src="images/title-bar-shadow-white.gif"/></TD></TR></TBODY></TABLE>
+</SPAN>
+</TD>
+<!--*********************Header Rendering Ends*********************-->
+</tr>
+<tr height="100%" bgcolor="white" id="trQuestions" valign="top">
+<!--*********************Question Rendering*********************-->
+<td align="center" style="BORDER-RIGHT:#a3a3a3 1px solid; PADDING-RIGHT:4px; BORDER-LEFT:#a3a3a3 1px solid">
+<div id="Q0div" class="questionDiv" style="display:none">
+<table id="mTable0" height="100%" width="100%" cellspacing="0" cellpadding="0">
+<tr height="100%" id="trmTable0" valign="top">
+<td id="m_QdQProp0" width="45%" style="padding-left:3px;height:100%;" valign="top">
+<DIV style="height:100%;"><TABLE  id="tblQuestionInformation0" style="BORDER-BOTTOM: #a3a3a3 1px solid; BORDER-LEFT: #a3a3a3 1px solid; WIDTH: 100%; BORDER-COLLAPSE: collapse; HEIGHT: 100%; BORDER-TOP: #a3a3a3 0px solid; BORDER-RIGHT: #a3a3a3 1px solid" border=0 cellSpacing=0 cellPadding=0>
+<TBODY>
+<TR style="HEIGHT: 40px">
+<TD vAlign=middle>
+<TABLE style="BACKGROUND-IMAGE: url(images/footer.gif); WIDTH: 100%; BORDER-COLLAPSE: collapse; HEIGHT: 100%" border=0 cellSpacing=0 cellPadding=0>
+<TBODY>
+<TR style="HEIGHT: 8px">
+<TD style="PADDING-LEFT: 5px; WIDTH: 100%" vAlign=middle noWrap align=left><SPAN class=styleFontSize>Question 1 of 1</SPAN></TD>
+<TD align=right><SPAN id=m_QMultipleChoice_0_ctrlQDSInfoRem>
+<TABLE style="BORDER-RIGHT-WIDTH: 0px; WIDTH: 100%; BORDER-COLLAPSE: collapse; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id=m_QMultipleChoice_0_ctrlQDSInfoRem_tblInfoRem border=0 cellSpacing=0 cellPadding=0 align=center>
+<TBODY>
+<TR>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD><div ID="0RemButton" style="display: none; vertical-align: middle;" TABINDEX='0'  onselectstart='event.returnValue=false;'  ondragstart='event.returnValue=false;'><div style="display: inline; vertical-align: middle;"><SPAN btnQRemtdLeftCapID="0btnQRemtdLeftCap" btnQRemtdRightCapID="0btnQRemtdRightCap" btnQRemtdButtonImageID="0btnQRemtdButtonImage" btnQRemtdContentID="0btnQRemtdContent" onClick='ShowRem();' onMouseOver='btnQRemmOverBtn(this,"0");'  onMouseOut='btnQRemmOutBtn(this,"0");' onMouseDown='btnQRemmDownBtn(this,"0");' onMouseUp='btnQRemmOverBtn(this,"0");' Style='' id='0btnQRemspanMain' Title="Select HotSpot" ><table border="0" id="tblbtnQRem" cellpadding=0 cellspacing=0 style="Cursor:default; display: inline;" Width='1' height='0'><tr height='0'><td style='padding-left:3px' id='0btnQRemtdLeftCap' background='images/button-left-50.gif'></td><td width="0" style='padding-left:0; padding-right:0' nowrap align='right' background='images/button-middle-50.gif' id='0btnQRemtdButtonImage' align="right"  background='images/blank.gif'  style='padding-right:1px'><img src="images/remed-good.gif" id='0btnQRemimgLeft'/></td><td style='padding-left:3px' id='0btnQRemtdRightCap' background='images/button-right-50.gif'></td></tr></table>	</SPAN></div></div></TD>
+<TD>
+</TD>
+<TD></TD>
+<TD></TD></TR></TBODY></TABLE></SPAN></TD>
+<TD style="PADDING-RIGHT: 4px">
+<DIV style="DISPLAY: inline; VERTICAL-ALIGN: middle" ondragstart=event.returnValue=false; id=divm_QMultipleChoice$0$btnQuestionList onselectstart=event.returnValue=false; tabIndex=0 onkeypress=m_QMultipleChoice$0$btnQuestionListEnterPress()>
+<DIV style="DISPLAY: inline; VERTICAL-ALIGN: middle"><SPAN id=m_QMultipleChoice$0$btnQuestionListspanMain onmouseup=m_QMultipleChoice$0$btnQuestionListmOverBtn(this) onmouseover=m_QMultipleChoice$0$btnQuestionListmOverBtn(this) title="Question List" onmouseout=m_QMultipleChoice$0$btnQuestionListmOutBtn(this) onmousedown=m_QMultipleChoice$0$btnQuestionListmDownBtn(this) onclick=m_QMultipleChoice$0$btnQuestionListbtnClick();if(m_QMultipleChoice$0$btnQuestionListisBtnEnabled()){}>
+<TABLE style="DISPLAY: inline; CURSOR: default" id=tblm_QMultipleChoice$0$btnQuestionList border=0 cellSpacing=0 cellPadding=0 width=1><TRHEIGHT='0'>
+<TBODY>
+<TR>
+<TD style="PADDING-LEFT: 3px" id=m_QMultipleChoice$0$btnQuestionListtdLeftCap background=images/button-left-50.gif></TD>
+<TD style="PADDING-LEFT: 0px; PADDING-RIGHT: 0px;display:" id=m_QMultipleChoice$0$btnQuestionListtdButtonImage background=images/button-middle-50.gif noWrap align=right><IMG id=m_QMultipleChoice$0$btnQuestionListimgLeft src="images/question-list.gif"/></TD>
+<TD style="PADDING-LEFT: 3px" id=m_QMultipleChoice$0$btnQuestionListtdRightCap background=images/button-right-50.gif></TD></TR></TBODY></TABLE></SPAN></DIV>
+<INPUT style="DISPLAY: none" onpropertychange=m_QMultipleChoice$0$btnQuestionListBtnPropertyChange() id=m_QMultipleChoice_0_btnQuestionList title="Question List" onclick="showQuestionList();return false;" name=m_QMultipleChoice$0$btnQuestionList type=submit/></DIV></TD></TR></TBODY></TABLE></TD></TR>
+<TR>
+<TD background=images/title-bar-shadow-white.gif colSpan=4><IMG border=0 src="images/title-bar-shadow-white.gif"/></TD></TR>
+<TR  id="trQuestionHTML0">
+<TD style="PADDING-LEFT: 5px">
+<TABLE style="WIDTH: 100%; " id="tblQuestionHTML0" border=0>
+<TBODY>
+<TR id="trQuestionText">
+<TD style="PADDING-TOP: 0px" vAlign=top align='left'><SPAN style="WIDTH: 100%; DISPLAY: inline-block; OVERFLOW: auto">Who is here?</SPAN></TD></TR></TBODY></TABLE></TD></TR>
+<TR>
+<TD style="PADDING-BOTTOM: 4px; height:100%; WIDTH: 100%" id=m_QMultipleChoice_0_tcQuestionOther vAlign=top align=center></TD></TR>
+<TR>
+<TD background=images/footer.gif>
+<TABLE style="BORDER-RIGHT-WIDTH: 0px; WIDTH: 100%; BORDER-COLLAPSE: collapse; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" border=0 cellSpacing=0 cellPadding=0>
+<TBODY>
+<TR style="HEIGHT: 40px">
+<TD style="Visibility:hidden;PADDING-LEFT: 4px; WIDTH: 100%" id=m_QMultipleChoice_0_tcMarkQuestion vAlign=middle align=left>
+<TABLE id=m_QMultipleChoice$0$chkMarkQuestontblCheckBox onselectstart=event.returnValue=false; class=MarkcheckBoxStyle onmouseover=m_QMultipleChoice$0$chkMarkQuestonmouseOver() onmouseout=m_QMultipleChoice$0$chkMarkQuestonmouseOut() onmousedown=m_QMultipleChoice$0$chkMarkQuestonmouseDown() onclick=m_QMultipleChoice$0$chkMarkQuestontblClick() border=0 MouseOverStyle="MarkcheckBoxMouseOverStyle" onPressedStyle="MarkcheckBoxPressedStyle" onClickStyle="MarkcheckBoxSelectedStyle" OriginalClass="MarkcheckBoxStyle">
+<TBODY>
+<TR>
+<TD class=MarkCheckBoxCellStyle vAlign=middle><IMG style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id=m_QMultipleChoice$0$chkMarkQuestonimgCheckBox src="images/checkbox-off-small.png" AltImageURL="images/checkbox-on-small.png"/> </TD>
+<TD id=m_QMultipleChoice$0$chkMarkQuestontcCheckBoxText class=MarkTextStyle align=left>Mark </TD></TR></TBODY></TABLE><SPAN style="DISPLAY: none" class=MarkcheckBoxStyle><INPUT id=m_QMultipleChoice_0_chkMarkQueston name=m_QMultipleChoice$0$chkMarkQueston value="" type=checkbox/><LABEL for=m_QMultipleChoice_0_chkMarkQueston>Mark</LABEL></SPAN></TD>
+<TD style="PADDING-RIGHT: 8px" id=m_QMultipleChoice_0_tcQuestionScore noWrap><SPAN class=styleFontSize>You scored:</SPAN><SPAN id=m_Q_0_lblQuestionScoreValue class=styleFontSize></SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><SPAN style="DISPLAY: none" id=m_QMultipleChoice_0_lblScriptAcceptAnswerID></SPAN></DIV>
+</td>
+<td id="tdAnswer" class="Answer" valign="top">
+<TABLE cellSpacing="0" cellPadding="0" width='100%' align="center" border="0" style='VERTICAL-ALIGN: text-top'	height="100%">
+<TBODY>
+<tr height="1">
+<td class="styleHeaderAnswer" style="background-image:url(images/footer.gif)"><span>Select one or more answers from the choices below.</span></td>
+</tr>
+<tr height="1">
+<td background="images/title-bar-shadow-white.gif" colspan="2"><IMG src='images/title-bar-shadow-white.gif' border='0'/></td>
+</tr>
+<tr height="100%">
+<td width='100%' valign="top" height="100%" style="padding-left:5px;padding-right:5px;">
+<DIV style="BORDER-RIGHT: #a3a3a3 0px solid; BORDER-TOP: #a3a3a3 0px solid; OVERFLOW: auto; BORDER-LEFT: #a3a3a3 0px solid; BORDER-BOTTOM: #a3a3a3 0px solid; HEIGHT: 100%; 							BACKGROUND-COLOR: white">
+<table id="m_QMultipleChoice_tblResponse" class="tblResponseStyle" cellspacing="1" cellpadding="1" align="Center" style="border-width:0px;width:100%;">
+<tr id="m_Q00_trResponse" class="trResponseStyle" name="trResponse">
+<td id="m_Q00_tcInfo" class="tcInfoStyle" name="tcInfo" style="width:5%;"></td><td id="m_Q00_tcResponseText" class="tcResponseText" name="tcResponseText">
+<!--CheckBox Starts from here-- for the checkbox m_QMultipleResp00CheckBox-->
+<table id='m_QMultipleResp00CheckBoxtblCheckBox'    class='MultiplecheckBoxStyle'  onClick='CheckBoxtblClick(this,"m_QMultipleResp00CheckBoxid","m_QMultipleResp00CheckBoximgCheckBox","0")' onmouseDown='CheckBoxMouseDown(this)'  border='0' onselectstart='event.returnValue=false;'>
+<tr>
+<td valign=middle  class='MultipleCheckBoxCellStyle'><img id='m_QMultipleResp00CheckBoximgCheckBox'  src='images/checkbox-off.png' style='border-width:0px;' />
+</td>
+<td id='m_QMultipleResp00CheckBoxtcCheckBoxText' class='MultipleTextStyle' align=left>You </td>
+</tr>
+</table>
+<!--CheckBox Ends here m_QMultipleResp00CheckBox-->
+<span class="MultiplecheckBoxStyle" style="Display:none;"><input id="m_QMultipleResp00CheckBoxid" type="checkbox" name="m_QMultipleResp00CheckBox" /><label for="m_QMultipleResp00CheckBoxid">You</label></span>
+</td>
+</tr>
+<tr id="m_Q01_trResponse" class="trResponseStyle" name="trResponse">
+<td id="m_Q01_tcInfo" class="tcInfoStyle" name="tcInfo" style="width:5%;"></td><td id="m_Q01_tcResponseText" class="tcResponseText" name="tcResponseText">
+<!--CheckBox Starts from here-- for the checkbox m_QMultipleResp01CheckBox-->
+<table id='m_QMultipleResp01CheckBoxtblCheckBox'    class='MultiplecheckBoxStyle'  onClick='CheckBoxtblClick(this,"m_QMultipleResp01CheckBoxid","m_QMultipleResp01CheckBoximgCheckBox","1")' onmouseDown='CheckBoxMouseDown(this)'  border='0' onselectstart='event.returnValue=false;'>
+<tr>
+<td valign=middle  class='MultipleCheckBoxCellStyle'><img id='m_QMultipleResp01CheckBoximgCheckBox'  src='images/checkbox-off.png' style='border-width:0px;' />
+</td>
+<td id='m_QMultipleResp01CheckBoxtcCheckBoxText' class='MultipleTextStyle' align=left>Me </td>
+</tr>
+</table>
+<!--CheckBox Ends here m_QMultipleResp01CheckBox-->
+<span class="MultiplecheckBoxStyle" style="Display:none;"><input id="m_QMultipleResp01CheckBoxid" type="checkbox" name="m_QMultipleResp01CheckBox" /><label for="m_QMultipleResp01CheckBoxid">Me</label></span>
+</td>
+</tr>
+<tr id="m_Q02_trResponse" class="trResponseStyle" name="trResponse">
+<td id="m_Q02_tcInfo" class="tcInfoStyle" name="tcInfo" style="width:5%;"></td><td id="m_Q02_tcResponseText" class="tcResponseText" name="tcResponseText">
+<!--CheckBox Starts from here-- for the checkbox m_QMultipleResp02CheckBox-->
+<table id='m_QMultipleResp02CheckBoxtblCheckBox'    class='MultiplecheckBoxStyle'  onClick='CheckBoxtblClick(this,"m_QMultipleResp02CheckBoxid","m_QMultipleResp02CheckBoximgCheckBox","2")' onmouseDown='CheckBoxMouseDown(this)'  border='0' onselectstart='event.returnValue=false;'>
+<tr>
+<td valign=middle  class='MultipleCheckBoxCellStyle'><img id='m_QMultipleResp02CheckBoximgCheckBox'  src='images/checkbox-off.png' style='border-width:0px;' />
+</td>
+<td id='m_QMultipleResp02CheckBoxtcCheckBoxText' class='MultipleTextStyle' align=left>No one. </td>
+</tr>
+</table>
+<!--CheckBox Ends here m_QMultipleResp02CheckBox-->
+<span class="MultiplecheckBoxStyle" style="Display:none;"><input id="m_QMultipleResp02CheckBoxid" type="checkbox" name="m_QMultipleResp02CheckBox" /><label for="m_QMultipleResp02CheckBoxid">No one.</label></span>
+</td>
+</tr>
+<tr id="m_Q03_trResponse" class="trResponseStyle" name="trResponse">
+<td id="m_Q03_tcInfo" class="tcInfoStyle" name="tcInfo" style="width:5%;"></td><td id="m_Q03_tcResponseText" class="tcResponseText" name="tcResponseText">
+<!--CheckBox Starts from here-- for the checkbox m_QMultipleResp03CheckBox-->
+<table id='m_QMultipleResp03CheckBoxtblCheckBox'    class='MultiplecheckBoxStyle'  onClick='CheckBoxtblClick(this,"m_QMultipleResp03CheckBoxid","m_QMultipleResp03CheckBoximgCheckBox","3")' onmouseDown='CheckBoxMouseDown(this)'  border='0' onselectstart='event.returnValue=false;'>
+<tr>
+<td valign=middle  class='MultipleCheckBoxCellStyle'><img id='m_QMultipleResp03CheckBoximgCheckBox'  src='images/checkbox-off.png' style='border-width:0px;' />
+</td>
+<td id='m_QMultipleResp03CheckBoxtcCheckBoxText' class='MultipleTextStyle' align=left>Everyone </td>
+</tr>
+</table>
+<!--CheckBox Ends here m_QMultipleResp03CheckBox-->
+<span class="MultiplecheckBoxStyle" style="Display:none;"><input id="m_QMultipleResp03CheckBoxid" type="checkbox" name="m_QMultipleResp03CheckBox" /><label for="m_QMultipleResp03CheckBoxid">Everyone</label></span>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</TBODY>
+</TABLE>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<!--*********************Question Rendering Ends Here*********************-->
+</tr>
+<tr  bgcolor="white">
+<!--*********************Footer Rendering*********************-->
+<td align="center" style="padding-top: 4px; border-right-color: #a3a3a3; border-left-color: #a3a3a3; border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid;" colSpan="2">
+<TABLE border=0 cellSpacing=0 cellPadding=0 width="100%" background=images/footer.gif align=center><TBODY>
+<TR vAlign=middle>
+<TD vAlign=middle width="100%" align=center>
+<TABLE style="VERTICAL-ALIGN: middle; PADDING-TOP: 3px" border=0 cellSpacing=0 cellPadding=0>
+<TBODY>
+<TR>
+<TD vAlign=middle width=20 align=center>
+<DIV style="DISPLAY: inline; VERTICAL-ALIGN: middle" ondragstart=event.returnValue=false; id=div_quizFooter$btnBack onselectstart=event.returnValue=false; tabIndex=0 onkeypress=_quizFooter$btnBackEnterPress()>
+<DIV style="DISPLAY: inline; VERTICAL-ALIGN: middle"><SPAN id=_quizFooter$btnBackspanMain onmouseup=_quizFooter$btnBackmOverBtn(this) onmouseover=_quizFooter$btnBackmOverBtn(this) title=Back onmouseout=_quizFooter$btnBackmOutBtn(this) onmousedown=_quizFooter$btnBackmDownBtn(this) onclick=_quizFooter$btnBackbtnClick();if(_quizFooter$btnBackisBtnEnabled()){}>
+<TABLE style="DISPLAY: inline; CURSOR: default" id=tbl_quizFooter$btnBack border=0 cellSpacing=0 cellPadding=0 width=1><TRHEIGHT='0'>
+<TBODY>
+<TR>
+<TD style="PADDING-LEFT: 3px" id=_quizFooter$btnBacktdLeftCap background=images/button-left-50.gif></TD>
+<TD style="PADDING-LEFT: 0px; PADDING-RIGHT: 0px" id=_quizFooter$btnBacktdButtonImage background=images/button-middle-50.gif noWrap align=right><IMG id=_quizFooter$btnBackimgLeft src="images/question-back.gif"/></TD>
+<TD style="PADDING-LEFT: 3px" id=_quizFooter$btnBacktdRightCap background=images/button-right-50.gif></TD></TR></TBODY></TABLE></SPAN></DIV>
+<INPUT style="WIDTH: 80px; DISPLAY: none" onpropertychange=_quizFooter$btnBackBtnPropertyChange() id=_quizFooter_btnBack class=Button title=Back name=_quizFooter$btnBack width=0 height=0 type=submit/></DIV>
+</TD>
+<TD style="PADDING-LEFT: 25px; PADDING-RIGHT: 25px" vAlign=middle width=20 align=center>
+<DIV style="DISPLAY: inline; VERTICAL-ALIGN: middle" ondragstart=event.returnValue=false; id=div_quizFooter$btnAccpet onselectstart=event.returnValue=false; tabIndex=0 onkeypress=_quizFooter btnAccpetEnterPress()>
+<DIV style="DISPLAY: inline; VERTICAL-ALIGN: middle"><SPAN id=_quizFooter$btnAccpetspanMain onmouseup=_quizFooter$btnAccpetmOverBtn(this) onmouseover=_quizFooter$btnAccpetmOverBtn(this) title=Submit onmouseout=_quizFooter$btnAccpetmOutBtn(this) onmousedown=_quizFooter$btnAccpetmDownBtn(this) onclick=_quizFooter$btnAccpetbtnClick();if(_quizFooter$btnAccpetisBtnEnabled()){}>
+<TABLE style="DISPLAY: inline; CURSOR: default" id=tbl_quizFooter$btnAccpet border=0 cellSpacing=0 cellPadding=0 width=1 height=40><TRHEIGHT='40'>
+<TBODY>
+<TR>
+<TD style="PADDING-LEFT: 3px" id=_quizFooter$btnAccpettdLeftCap background=images/button-left-50.gif></TD>
+<TD style="PADDING-LEFT: 0px; PADDING-RIGHT: 2px" id=_quizFooter$btnAccpettdContent background=images/button-middle-50.gif width="100%" align=center><NOBR><SPAN style="WIDTH: 0%" id=_quizFooter$btnAccpettxt onselectstart=event.returnValue=false; class=buttonClass>Submit Answer</SPAN></NOBR></TD>
+<TD style="PADDING-LEFT: 3px" id=_quizFooter$btnAccpettdRightCap background=images/button-right-50.gif></TD></TR></TBODY></TABLE></SPAN></DIV>
+<INPUT style="WIDTH: 140px; DISPLAY: none" onpropertychange=_quizFooter$btnAccpetBtnPropertyChange() id=_quizFooter_btnAccpet class=Button title=Submit onclick="document.all(AcceptAnswerID).click();return false;" name=_quizFooter$btnAccpet value="Submit Answer" width=0 height=0 type=submit/></DIV></TD>
+<TD vAlign=middle width=20 align=left>
+<DIV style="DISPLAY: inline; VERTICAL-ALIGN: middle" ondragstart=event.returnValue=false; id=div_quizFooter$btnNext onselectstart=event.returnValue=false; tabIndex=0 onkeypress=_quizFooter$btnNextEnterPress()>
+<DIV style="DISPLAY: inline; VERTICAL-ALIGN: middle"><SPAN id=_quizFooter$btnNextspanMain onmouseup=_quizFooter$btnNextmOverBtn(this) onmouseover=_quizFooter$btnNextmOverBtn(this) title=Next onmouseout=_quizFooter$btnNextmOutBtn(this) onmousedown=_quizFooter$btnNextmDownBtn(this) onclick=_quizFooter$btnNextbtnClick();if(_quizFooter$btnNextisBtnEnabled()){}>
+<TABLE style="DISPLAY: inline; CURSOR: default" id=tbl_quizFooter$btnNext border=0 cellSpacing=0 cellPadding=0 width=1><TRHEIGHT='0'>
+<TBODY>
+<TR>
+<TD style="PADDING-LEFT: 3px" id=_quizFooter$btnNexttdLeftCap background=images/button-left-50.gif></TD>
+<TD style="PADDING-LEFT: 0px; PADDING-RIGHT: 0px" id=_quizFooter$btnNexttdButtonImage background=images/button-middle-50.gif noWrap align=right><IMG id=_quizFooter$btnNextimgLeft src="images/question-next.gif"/></TD>
+<TD style="PADDING-LEFT: 3px" id=_quizFooter$btnNexttdRightCap background=images/button-right-50.gif></TD></TR></TBODY></TABLE></SPAN></DIV>
+<INPUT style="WIDTH: 80px; DISPLAY: none" onpropertychange=_quizFooter$btnNextBtnPropertyChange() id=_quizFooter_btnNext class=Button title=Next name=_quizFooter$btnNext width=0 height=0 type=submit/></DIV>
+</TD></TR></TBODY></TABLE></TD>
+<TD style="PADDING-RIGHT: 4px; PADDING-TOP: 3px" vAlign=middle align=right>
+<DIV style="DISPLAY: inline; VERTICAL-ALIGN: middle" ondragstart=event.returnValue=false; id=div_quizFooter$btnExit onselectstart=event.returnValue=false; tabIndex=0 onkeypress=_quizFooter$btnExitEnterPress()>
+<DIV style="DISPLAY: inline; VERTICAL-ALIGN: middle"><SPAN id=_quizFooter$btnExitspanMain onmouseup=_quizFooter$btnExitmOverBtn(this) onmouseover=_quizFooter$btnExitmOverBtn(this) title="" onmouseout=_quizFooter$btnExitmOutBtn(this) onmousedown=_quizFooter$btnExitmDownBtn(this) onclick=_quizFooter$btnExitbtnClick();if(_quizFooter$btnExitisBtnEnabled()){}>
+<TABLE style="DISPLAY: inline; CURSOR: default" id=tbl_quizFooter$btnExit border=0 cellSpacing=0 cellPadding=0 width=1 height=40><TRHEIGHT='40'>
+<TBODY>
+<TR>
+<TD style="PADDING-LEFT: 3px" id=_quizFooter$btnExittdLeftCap background=images/button-left-50.gif></TD>
+<TD style="PADDING-LEFT: 0px; PADDING-RIGHT: 2px" id=_quizFooter$btnExittdContent background=images/button-middle-50.gif width="100%" align=center><NOBR><SPAN style="WIDTH: 0%" id=_quizFooter$btnExittxt onselectstart=event.returnValue=false; class=buttonClass>Exit</SPAN></NOBR></TD>
+<TD style="PADDING-LEFT: 3px" id=_quizFooter$btnExittdRightCap background=images/button-right-50.gif></TD></TR></TBODY></TABLE></SPAN></DIV>
+<INPUT style="WIDTH: 80px; DISPLAY: none" onpropertychange=_quizFooter$btnExitBtnPropertyChange() id=_quizFooter_btnExit class=Button onclick="Exit('N');return false;" name=_quizFooter$btnExit value=Exit width=0 height=0 type=submit/></DIV></TD></TR></TBODY></TABLE>
+</td>
+<!--*********************Footer Rendering Ends Here*********************-->
+</tr>
+</table>
+<span id="DragText" style="display: none; left: 0px; position: absolute; top: 0px">
+</BODY>
+</HTML>

@@ -1,0 +1,352 @@
+/******************************************************************************
+/* HTML Tag Styles 
+******************************************************************************/
+
+.TestpropLabelBold{
+color: #292988;
+font-size: 8pt;
+font-family: Tahoma;
+font-weight: bold;
+}
+.TestpropLabel{
+color: #282899;
+font-size: 8pt;
+font-family: Tahoma;
+}
+.TestLableQ{
+color: #292988;
+font-size: 8pt;
+font-family: Tahoma;
+}
+/*Style for Multiple Choice type Responses Table*/
+.tblResponseStyle
+{
+	background-color:White;
+	border:solid 0px white;
+}
+.trResponseStyle
+{
+	
+	height:"50px";
+	background-color:White;
+}
+.tcInfoStyle
+{
+	background-color:White;
+}
+.tcResponseStyle
+{
+	vertical-align:middle;
+	background-color:White;
+}
+.tcResponseText
+{
+	background-color:White;
+	font-size: 18pt;
+}
+
+.trResponseStyleChecked
+{
+	height:"50px";
+	background-color:#DCE6F2;
+}
+.tcInfoStyleChecked
+{
+	background-color:#DCE6F2;
+}
+.tcResponseStyleChecked
+{
+	vertical-align:middle;
+	background-color:#DCE6F2;
+}
+.tcResponseTextChecked
+{
+	background-color:#DCE6F2;
+}
+
+/*style for Question Header*/
+.styleHeaderAnswer 
+{
+	
+	FONT-WEIGHT: bold; 
+	FONT-SIZE: 12pt; 
+	BACKGROUND-IMAGE: url(Images/footer.gif); 
+	
+	FONT-FAMILY: Tahoma; 
+	color: #777777;
+	Height:40px;
+	vertical-align:middle;
+	width:100%;
+	padding-left:4px;
+}
+.styleHeaderQuestion 
+{
+	
+
+	FONT-WEIGHT: bold;
+	 FONT-SIZE: 12pt; 
+	PADDING-right: 5px;
+	
+	FONT-FAMILY: Tahoma; 
+	color: #777777;
+	
+}
+.questionDiv 
+{
+	BORDER-RIGHT: #a3a3a3 0px solid; 
+	BORDER-TOP: #a3a3a3 0px solid; 
+	VISIBILITY: visible; 
+	OVERFLOW: hidden; 
+	BORDER-LEFT: #a3a3a3 0px solid; 
+	WIDTH: 100%; 
+	BORDER-BOTTOM: #a3a3a3 0px solid; 
+	POSITION: relative; 
+	HEIGHT: 100% }
+.questionPara { TEXT-ALIGN: left }
+.Answer { BORDER-RIGHT: #a3a3a3 1px solid; 
+	BORDER-TOP: #a3a3a3 0px solid; PADDING-LEFT: 0px; 
+	VISIBILITY: visible; OVERFLOW: hidden;
+	 BORDER-LEFT: #a3a3a3 1px solid; WIDTH: 100%; 
+	 BORDER-BOTTOM: #a3a3a3 1px solid; 
+	 }
+	.seleButton { FONT-WEIGHT: bold; FONT-SIZE: 12pt; WIDTH: 65px; CURSOR: hand; COLOR: #282899; HEIGHT: 1% }
+.unSeleButton { FONT-WEIGHT: bold; FONT-SIZE: 12pt; WIDTH: 65px; CURSOR: hand; COLOR: #282899; HEIGHT: 1% }
+
+.buttonClass{
+color: #282899;font-size: 12pt;font-family: Tahoma;font-weight: bold;padding-left:5px;padding-right:5px;
+}
+.buttonDisabledClass{
+color: #777777;font-size: 12pt;font-family: Tahoma;font-weight: bold;padding-left:5px;padding-right:5px;
+}
+
+.MarkcheckBoxMouseOverStyle{
+
+ border:solid 1px #a3a3a3;
+		width:1%;
+}
+.MarkCheckBoxCellStyle
+{
+ 
+		width:1%;
+}
+.MarkcheckBoxDisabledStyle
+{
+	
+	 
+		width:1%;
+}
+.MarkcheckBoxDisabledSelectedStyle
+{
+
+		 
+		width:1%;
+}
+.MarkcheckBoxStyle
+{
+border:solid 1px transparent;
+		width:1%;
+}
+	 .MarkcheckBoxSelectedStyle
+	 {
+	 border:solid 1px transparent;
+		
+	 background-color:#C1CBFF;
+
+		width:1%;
+	 }
+	 .MarkTextStyle
+	 {
+
+		font-size:13pt;
+		font-family:tahoma;
+		color:#292988;
+		padding-left:5px;
+		padding-right:5px;
+	 }
+	 .MarkcheckBoxPressedStyle
+	 {
+
+	 background-color:#436FC8;
+	 
+		width:1%;
+	 }
+
+
+.MultipleCheckBoxCellStyle
+{
+		padding-left:3px;
+		padding-top:3px;
+		padding-bottom:3px;
+		width:1%;
+}
+.MultiplecheckBoxDisabledStyle
+{
+		background-color:white;
+		border:solid 1px #a3a3a3;
+		width:95%;
+}
+.MultiplecheckBoxDisabledSelectedStyle
+{
+		background-color:#C1CBFF;
+		border:solid 1px #a3a3a3;
+		width:95%;
+}
+.MultiplecheckBoxStyle
+{
+		background-color:white;
+		border:solid 1px #a3a3a3;
+		width:95%;
+}
+	 .MultiplecheckBoxSelectedStyle
+	 {
+	 background-color:#C1CBFF;
+		border:solid 1px #a3a3a3;
+		width:95%;
+	 }
+	 .MultipleTextStyle
+	 {
+		font-size:13pt;
+		font-family:tahoma;
+		color:#292988;
+		padding-left:15px;
+	 }
+	 .MultiplecheckBoxPressedStyle
+	 {
+	 background-color:#436FC8;
+		border:solid 1px #a3a3a3;
+		width:95%;
+	 }
+ 
+.styleFontSize{
+		FONT-WEIGHT: bold;
+	 FONT-SIZE: 10pt; 
+	PADDING-right: 5px;
+	FONT-FAMILY: Tahoma; 
+	color: #777777;
+		vertical-align:middle;
+}
+.styleFontSizeMark{
+		FONT-WEIGHT: bold;
+	 FONT-SIZE: 12pt; 
+	PADDING-right: 5px;
+	FONT-FAMILY: Tahoma; 
+	color: #777777;
+		vertical-align:middle;
+}
+
+/*For Matching*/
+.anch
+	{
+		color: black;
+		text-decoration: none;
+	}
+	.applyBorder
+	{
+		vertical-align: middle;
+		background: #a3a3ff scroll repeat 0% 0%;
+		height:100%;
+		display:inline-block;
+		font-family:Tahoma;
+		font-size:12;
+		color:#a3a3a3;
+		
+	}
+	.removeBorder
+	{
+		background: none transparent scroll repeat 0% 0%;
+		vertical-align: middle;
+			font-family:Tahoma;
+		font-size:12;
+		color:#a3a3a3;
+	}
+	.cssResponseHTML
+	{
+		vertical-align: middle;
+		height:100%;
+	}
+	.cssResponseHTMLDragAndDrop
+	{
+		background: none transparent scroll repeat 0% 0%;
+		vertical-align: middle;
+		display:inline-block;
+		font-family:Tahoma;
+		font-size:12;
+		color:#a3a3a3;
+	}
+/*End Matching */
+
+.TableAlternatingItem
+{
+	color: Black;
+	background-color: #ECF1F7;
+}
+.TableItem
+{
+	background-color: white;
+	color: black;
+}
+.correctSequence
+{
+		background-color: green;
+	color: white;
+height:50px;
+}
+.inCorrectResponseStyle{
+		background-color: red;
+	color: white;
+height:50px;
+}
+.Headercss
+{
+		background-color: black;
+	color: white;
+	font-family:Tahoma;
+		font-size:14;
+		font-weight: bold;
+}
+/* Pane styles */
+.pane_header
+{
+	background-color: #85A6D5;
+	border-bottom: solid 1px #3D5793;
+	vertical-align: middle;
+}
+
+.pane_headerCorner
+{
+	border-bottom: solid 1px #3D5793;
+	background-color: #85A6D5;
+}
+.pane_header_text
+{
+	font-family: tahoma;
+	font-weight: bolder;
+	color: #FFFFFF;
+	font-size: 13px;
+}
+
+.pane_content, .pane_left, .pane_right
+{
+	background-color: #ECF1F7;
+	border-bottom: solid 1px #3D5793;
+}
+
+.pane_content
+{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.pane_left
+{
+	border-left: solid 1px #3D5793;
+	font-size: 2px;
+	background-color: #85A6D5;
+}
+
+.pane_right
+{
+	border-right: solid 1px #3D5793;
+	font-size: 2px;
+	background-color: #85A6D5;
+}

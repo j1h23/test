@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery.min.js"></script>
+    <script src="kendo.web.min.js"></script>
+    <link href="kendo.common.min.css" rel="stylesheet" />
+    <link href="kendo.blueopal.min.css" rel="stylesheet" />
+    <link href="Quiz.css" rel="stylesheet" />
+    <script>
+      function GetCCData() {
+        return parent.window.GetCCData();
+        /*var data = [];
+
+        var ProcessNames = ["Go UP", "GowDown"];
+        var Images = ["images/arrowdnu.gif", "images/arrowdown-small.gif"];
+        for (var i = 0; i < ProcessNames.length; i++) {
+        var ProcessName = ProcessNames[i];
+        var ProcessImage = Images[i];
+        data.push({
+        Id: i + 1,
+        ProcessName: ProcessName,
+        ProcessImage: ProcessImage
+        });
+        }
+        return data;*/
+      }
+    </script>
+     <script>
+       $(document).ready(function () {
+         $("#grid").kendoGrid({
+           dataSource: {
+             data: GetCCData(),
+             schema: {
+               model: {
+                 fields: {
+                   Tag: { type: "string" },
+                   Range: { type: "string" },
+                   NOC: { type: "string" },
+                   Valve: { type: "string" },
+                   Mode: { type: "string" }
+                 }
+               }
+             }
+           },
+
+           scrollable: false,
+           sortable: false,
+           filterable: false,
+           pageable: false,
+           columns: [
+                            {
+                              field: "Tag",
+                              title: "Tag",
+                              width: 100
+                            },
+                            {
+                              field: "Range",
+                              
+                              title: "Range",
+                              width: 100
+                            },
+                            {
+                              field: "NOC",
+
+                              title: "N.O.C",
+                              width: 100
+                            },
+                            {
+                              field: "Valve",
+
+                              title: "valve",
+                              width: 100
+                            },
+                            {
+                              field: "Mode",
+
+                              title: "Mode",
+                              width: 100
+                            }
+                        ]
+         });
+       });
+            </script>
+</head>
+<body>
+<TABLE id="TABLE1s" style="WIDTH: 100%" cellSpacing="0" cellPadding="0" border="0">
+				<TBODY>
+					<tr height="24">
+						<td class="pane_headerCorner"><IMG height="25" hspace="0" src="images/pane_corner_left.gif" width="14"
+								vspace="0"></td>
+						<td class="pane_header" width="100%">
+							<table cellSpacing="0" cellPadding="0" width="100%" border="0">
+								<tr>
+									<td class="pane_header_text" align="left" width="100%"><span id="lblControlConfiguration">Control Configuration</span></td>
+								</tr>
+							</table>
+						</td>
+						<td class="pane_headerCorner"><IMG height="25" hspace="0" src="images/pane_corner_right.gif"
+								width="14" vspace="0"></td>
+					</tr>
+					<tr id="ReportControlShows">
+						<td class="pane_left">&nbsp;</td>
+						<td class="pane_content" width="100%">
+							<table id="tblGrid" width="100%" border="0">
+								<tr>
+									<td>
+
+            <div id="grid"></div>
+</td>
+			</tr>
+		</table></td>
+	
+						
+						<td class="pane_right">&nbsp;</td>
+					</tr>
+					<tr id="ReportControlHide" style="DISPLAY: none">
+						<td class="pane_merge" colSpan="3"><IMG height="4" src="images/spacer.gif" width="1"></td>
+					</tr>
+				</TBODY>
+			</TABLE>
+
+</body>
+</html>

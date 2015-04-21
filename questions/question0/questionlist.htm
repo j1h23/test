@@ -1,0 +1,111 @@
+<HTML>
+	<HEAD>
+		<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+		<META HTTP-EQUIV="Expires" CONTENT="Fri, Jun 12 1981 08:20:00 GMT">
+		<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+		<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+		<TITLE>Question List</TITLE>
+		<SCRIPT>
+	var oMyObject = window.dialogArguments;
+	function gotoQ(Qindex){
+		oMyObject.CMD="GO";
+		oMyObject.Qindex=Qindex;
+		window.close();
+	}
+	function windup(){
+		window.close();
+	}
+	var strtoWrite = "";
+	var showqid = oMyObject.ShowQuestionId;
+	if(showqid!="N"){
+		strtoWrite='<TR>';
+		strtoWrite= strtoWrite + '<TH width = "5%" align = middle><FONT color=black>Q.No.</FONT></TH>';
+		strtoWrite= strtoWrite + '<TH width = "10%" align = middle><FONT color=black>Q ID.</FONT></TH>';
+		strtoWrite= strtoWrite + '<TH width = "20%"><FONT color=black>Question Type</FONT> </TH>'
+		strtoWrite= strtoWrite + '<TH width = "55%"><FONT color=black>Question</FONT></TH>'
+		strtoWrite= strtoWrite + '<TH width = "5%"><FONT color=black>Answered</FONT></TH>'
+		strtoWrite= strtoWrite + '<TH width = "5%"><FONT color=black>Marked</FONT></TH></TR>'
+	}else{
+		strtoWrite='<TR>';
+		strtoWrite= strtoWrite + '<TH width = "5%" align = middle><FONT color=black>Q.No.</FONT></TH>';
+		strtoWrite= strtoWrite + '<TH width = "25%"><FONT color=black>Question Type</FONT> </TH>'
+		strtoWrite= strtoWrite + '<TH width = "60%"><FONT color=black>Question</FONT></TH>'
+		strtoWrite= strtoWrite + '<TH width = "5%"><FONT color=black>Answered</FONT></TH>'
+		strtoWrite= strtoWrite + '<TH width = "5%"><FONT color=black>Marked</FONT></TH></TR>'
+	}
+	
+	
+	//function createQtable(){
+	NumOfQuestions = oMyObject.NumOfQuestions;
+	var Qtypes="c"
+	for(i=0;i<NumOfQuestions;i++){
+	  Question = oMyObject.QuestonArray[i].Question;
+		fullQuestionText = Question;
+		Question = Question.substr(0,90);
+
+		Qtype = oMyObject.QuestonArray[i].Qtype;
+		Qid = oMyObject.QuestonArray[i].Qid;
+		
+
+
+Answered = oMyObject.QuestonArray[i].answered;
+		if(Answered=="true") {
+			Answered="Yes";
+
+			Answered = '<img src="images\/checkbox-on-small.png">';
+		}else{
+			Answered="No";
+			Answered = '<img src="images\/checkbox-off-small.png">';
+		}
+		
+		var Marked =  oMyObject.QuestonArray[i].Do_It_Later;
+		if(Marked=="Y"){
+		  Marked = '<img src="images\/checkbox-on-small.png">';
+		}else{
+	  Marked = '<img src="images\/checkbox-off-small.png">';
+		}
+		strtoWrite = strtoWrite + '<TR>';
+		
+		Qindex = i +1;
+		strtoWrite = strtoWrite + '<TD width = "5%">'+(Qindex)+'</TD>';
+		if(showqid!="N"){
+			strtoWrite = strtoWrite + '<TD width = "10%">'+Qid+'</TD>';
+		}
+	strtoWrite = strtoWrite + '<TD width = "20%">' + Qtype + '</TD>';
+		var  testType = oMyObject.ImmediateDeferred;
+	
+		if (testType=="I"){		
+			Question = "<div id = 'Question' title='" + fullQuestionText +"'><font color = 'black'>" + Question + "</font></div>";
+		}else{
+			Question = "<div id = 'Question' title='" + fullQuestionText +"' style='Cursor:Hand' onclick='gotoQ(\""+i+"\")'><u><font color = 'blue'>" + Question + "</font></u></div>";
+		}
+		if(showqid!="N"){
+		strtoWrite = strtoWrite + '<TD width = "60%">'+Question+'</TD>';
+		}else{
+		strtoWrite = strtoWrite + '<TD width = "65%">'+Question+'</TD>';
+		}
+		strtoWrite = strtoWrite + '<TD width = "5%" align=center>'+Answered+'</TD>';
+		strtoWrite = strtoWrite + '<TD width = "5%" align=center>'+Marked+'</TD></TR>';
+		
+
+	}
+
+	var x=200;
+var y=50,iW,iH;
+	strtoWrite = '<P align=center><STRONG><U><FONT face="MS Sans Serif" color=blue size=5>Question List</FONT></U></STRONG></P> <div id = "QListDiv"><TABLE cellSpacing=1 cellPadding=1 width="95%" style="OVERFLOW: auto" border=1 align=center bordercolor=deepskyblue>' +strtoWrite;
+	
+	strtoWrite = strtoWrite + '</TABLE>'
+	strtoWrite = strtoWrite + '</div>';
+	strtoWrite = strtoWrite + '<DIV id = "CloseDiv" align=right><p align = right><IMG src="images/close.gif" onClick = "windup()" Value = "Close" onmouseover="this.src=\'images/closeOn.gif\'"      style="CURSOR: hand; " onmouseout="this.src=\'images/close.gif\'" id=image1 name=image1 ></p></DIV>';
+		</SCRIPT>
+		<STYLE>
+#QListDiv {position: absolute; z-index: 5; visibility: visible;HEIGHT: 250px;WIDTH=100%;OVERFLOW: auto;}
+#CloseDiv {position: absolute; z-index: 5; visibility: visible;top:320}
+</STYLE>
+	</HEAD>
+	<BODY leftMargin="0" topMargin="0" rightMargin="0" bgcolor="aliceblue">
+		<SCRIPT>document.writeln(strtoWrite);
+	document.all("CloseDiv").style.posLeft=screen.availWidth-180;
+		</SCRIPT>
+	</BODY>
+</HTML>
